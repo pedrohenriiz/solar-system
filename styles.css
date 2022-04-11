@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #222;
+  overflow: hidden;
+}
+
+.loader {
+  position: relative;
+  width: 900px;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sun {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(236, 189, 21);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgb(225, 204, 15), 0 0 60px rgb(250, 207, 36);
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  animation: animate linear infinite;
+}
+
+.neptune {
+  width: 800px;
+  height: 800px;
+  animation-duration: 75s;
+}
+
+.uranus {
+  width: 700px;
+  height: 700px;
+  animation-duration: 50s;
+}
+
+.saturn {
+  width: 600px;
+  height: 600px;
+  animation-duration: 36s;
+}
+
+.saturn-rings {
+  position: absolute;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 50%;
+  top: -20px;
+  left: 278px;
+  width: 45px;
+  height: 45px;
+}
+
+.jupiter {
+  width: 500px;
+  height: 500px;
+  animation-duration: 30s;
+}
+
+.mars {
+  width: 350px;
+  height: 350px;
+  animation-duration: 18.5s;
+}
+
+.earth {
+  width: 250px;
+  height: 250px;
+  animation-duration: 13s;
+}
+
+.earth-circle {
+  position: absolute;
+  border: 30px solid transparent;
+  border-radius: 50%;
+  top: -28px;
+  left: 94px;
+  animation: animate 10s linear infinite;
+}
+
+.venus {
+  width: 180px;
+  height: 180px;
+  animation-duration: 8s;
+}
+
+.mercury {
+  width: 100px;
+  height: 100px;
+  animation-duration: 5s;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.earth-circle:before {
+  content: '';
+  position: absolute;
+  top: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: var(--clr);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
+}
+
+.circle:before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--clr);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
+}
+
+.circle.venus:before {
+  width: 25px;
+  height: 25px;
+}
+
+.circle.earth:before {
+  width: 28px;
+  height: 28px;
+}
+
+.circle.mars:before {
+  width: 26px;
+  height: 26px;
+}
+
+.circle.jupiter:before {
+  width: 33px;
+  height: 33px;
+}
+
+.circle.saturn:before {
+  width: 30px;
+  height: 30px;
+}
+
+.circle.uranus:before {
+  width: 28px;
+  height: 28px;
+}
